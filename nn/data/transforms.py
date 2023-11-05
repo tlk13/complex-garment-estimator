@@ -17,7 +17,7 @@ def _dict_to_tensors(dict_obj):  # helper
             new_dict[key] = torch.from_numpy(value)
 
             # TODO more stable way of converting the types (or detecting ints)
-            if value.dtype not in [np.int, np.int64, np.bool]:
+            if value.dtype not in [int, np.int64, bool]:
                 new_dict[key] = new_dict[key].float()  # cast all doubles and ofther stuff to floats
         else:
             new_dict[key] = torch.tensor(value)  # just try directly, if nothing else works

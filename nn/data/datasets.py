@@ -907,7 +907,7 @@ class Garment3DPatternFullDataset(GarmentBaseDataset):
     def _empty_panels_mask(self, num_edges):
         """Empty panels as boolean mask"""
 
-        mask = np.zeros(len(num_edges), dtype=np.bool)
+        mask = np.zeros(len(num_edges), dtype=bool)
         mask[num_edges == 0] = True
 
         return mask
@@ -972,7 +972,7 @@ class Garment3DPatternFullDataset(GarmentBaseDataset):
         """
         Construct the mask to identify edges that are not connected to any other
         """
-        mask = np.ones((pattern.shape[0], pattern.shape[1]), dtype=np.bool)
+        mask = np.ones((pattern.shape[0], pattern.shape[1]), dtype=bool)
         max_edge = pattern.shape[1]
 
         for side in stitches[:, :num_stitches]:  # ignore the padded part
