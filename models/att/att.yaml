@@ -13,16 +13,16 @@ dataset:
   data_folders:
     - dress_sleeveless_2550
     - jumpsuit_sleeveless_2000
-    - skirt_8_panels_1000
-    - wb_pants_straight_1500
+    #- skirt_8_panels_1000
+    #- wb_pants_straight_1500
     - skirt_2_panels_1200
     - jacket_2200
-    - tee_sleeveless_1800
-    - wb_dress_sleeveless_2600
+    #- tee_sleeveless_1800
+    #- wb_dress_sleeveless_2600
     - jacket_hood_2700
-    - pants_straight_sides_1000
-    - tee_2300
-    - skirt_4_panels_1600
+    #- pants_straight_sides_1000
+    #- tee_2300
+    #- skirt_4_panels_1600
 
   unseen_data_folders:
     - jacket_hood_sleeveless_150
