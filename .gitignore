@@ -1,5 +1,6 @@
 # Jupyter tmp files 
 .ipynb_checkpoints
+*.ipynb
 
 # Weights and Biases logs -- no need to save
 wandb
@@ -33,3 +34,6 @@ Garment-Pattern-Data*
 # dataset
 data/*
 new_data/*
+
+# no need to save output
+output/*
