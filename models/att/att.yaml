@@ -52,7 +52,7 @@ dataset:
   explicit_stitch_tags: False
   point_noise_w: 0
 
-  max_datapoints_per_type: 5000  # 5000 > more then any type has, so it basically means using all the data.
+  max_datapoints_per_type: 3  # 5000 > more then any type has, so it basically means using all the data.
                                  # This value can be reduced to reduce the training dataset size and hence 
                                  # the training time.
   panel_classification: ./nn/data_configs/panel_classes_condenced.json 
@@ -73,13 +73,13 @@ dataset:
       translations: [-55.255470275878906, -20.001333236694336, -17.086795806884766]
 
 data_split:
-  valid_per_type: 100
-  test_per_type: 100
-  random_seed: 10
+  valid_per_type: 1
+  test_per_type: 1
+  random_seed: 1
   type: count
   # NOTE addining 'filename' property to the split will force the data 
   # to be loaded from that list instead of being randomly generated
-  filename: ./nn/data_configs/data_split_on_filtered_dataset.json
+#  filename: ./nn/data_configs/data_split_on_filtered_dataset.json
 
 
 # ----- Network Architecture --------
@@ -141,9 +141,9 @@ NN:
 
 # ------- Trainer -----
 trainer: 
-  batch_size: 30
+  batch_size: 1
   devices: [cuda:0]
-  epochs: 350
+  epochs: 10
   random_seed: 916143406
   learning_rate: 0.002
   optimizer: Adam
